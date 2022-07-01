@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <RootNamespace>NGE_SQL_Executor</RootNamespace>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <Authors>NG Ecosystem</Authors>
+    <Company>PT AlgoLab Solution</Company>
+    <Product>NGE SQL Executor</Product>
+    <AssemblyVersion>1.0.3.3</AssemblyVersion>
+    <FileVersion>1.0.3.3</FileVersion>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>obj\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Program.cs~RFf48922.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lib\NGE-Tool-Lib\NGE-Tool-Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="run.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "NGE-SQL-Executor": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\nge-automation-runner\\sql-executor"
+    }
+  }
+}

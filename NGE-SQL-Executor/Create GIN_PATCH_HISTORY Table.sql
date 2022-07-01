@@ -1,0 +1,22 @@
+
+GO
+/****** Object:  Table [dbo].[GIN_PATCH_HISTORY]    Script Date: 5/9/2019 15:33:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GIN_PATCH_HISTORY]') AND type in (N'U'))
+BEGIN
+CREATE TABLE [dbo].[GIN_PATCH_HISTORY](
+	[DeployVersion] [dbo].[BOS_DT_szBigName] NOT NULL,
+	[FileName] [dbo].[BOS_DT_szBigName] NOT NULL,
+	[QueryData] nvarchar(max) NOT NULL,
+	[DateCreated] [datetime] NOT NULL
+	
+ CONSTRAINT [PK_GIN_PATCH_HISTORY] PRIMARY KEY CLUSTERED 
+(
+	[DeployVersion], [FileName] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+END
+GO
